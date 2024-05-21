@@ -1,5 +1,4 @@
 package cz.czechitas.java2webapps.ukol3.entity;
-
 import java.util.Objects;
 
 /**
@@ -84,6 +83,7 @@ public class Vizitka {
     }
 
     public String getCelaAdresa() {
-        return ulice + ", " + obecPsc;
+
+        return ulice+", "+obecPsc;
     }
 }
