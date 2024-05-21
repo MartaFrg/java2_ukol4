@@ -24,7 +24,7 @@
         [@spring.formInput path="vizitka.ulice" /]
         <div class="error">[@spring.showErrors "<br>"/]</div>
 
-        <label for="obecPsc" class="radek">Firma:</label>
+        <label for="obecPsc" class="radek">PSČ a obec:</label>
         [@spring.formInput path="vizitka.obecPsc"/]
         <div class="error">[@spring.showErrors "<br>"/]</div>
 

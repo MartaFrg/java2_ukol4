@@ -9,7 +9,9 @@ import java.util.List;
 @Service
 public class VizitkaService {
     private final List<Vizitka> seznamVizitek = new ArrayList<>();
-
+    //public static void PridejVizitku(Vizitka vizitka){
+     //   seznamVizitek.add(vizitka);
+    //}
     public VizitkaService() {
         seznamVizitek.add(
                 new Vizitka(
@@ -86,6 +88,12 @@ public class VizitkaService {
     public Vizitka getById(int id) {
         return seznamVizitek.get(id);
     }
+    public void PridejVizitku(Vizitka vizitka) {
+        seznamVizitek.add(vizitka);
+    }
+    public void SmazVizitku(int id) {
+       seznamVizitek.remove(id);
+    }
 
-   // public PridejVizitku
+
 }

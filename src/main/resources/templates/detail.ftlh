@@ -28,6 +28,10 @@
 
     <nav>
         <a href="/">◂ zpět na seznam</a>
+            <form action="/delete" method="post">
+            <input type="hidden" name="id" value="${id}"/>
+            <button type="submit"> smazat vizitku </button>
+        </form>
     </nav>
 </div>
 </body>

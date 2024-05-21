@@ -44,10 +44,16 @@ public class VizitkaController {
         if (bindingResult.hasErrors()) {
             return "/nova";
         }
-        ModelAndView result = new ModelAndView("seznam");
+        service.PridejVizitku(vizitka);
+           ModelAndView result = new ModelAndView("seznam");
         result.addObject("seznam", service.getAll());
         return result;
         //.addObject("kod", Math.abs(random.nextInt()))
+    }
+    @PostMapping("/delete")
+    public String delete(int id) {
+        service.SmazVizitku(id);
+        return "redirect:/";
     }
 }
 
