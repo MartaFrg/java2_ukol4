@@ -43,6 +43,7 @@ a {
     transition: box-shadow 0.2s, transform 0.2s;
 }
 
+
 .vizitka--nova {
     background-color: #FFFFFF66;
     border: 3px dotted white;
@@ -106,4 +107,13 @@ a:hover .vizitka {
     border: 1px solid gray;
     margin: 1em;
     box-shadow: 5px 5px 10px black;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}
+.radek {
+    font-weight: bold;
+    display: block;
+    margin-top: 1em;
 }
