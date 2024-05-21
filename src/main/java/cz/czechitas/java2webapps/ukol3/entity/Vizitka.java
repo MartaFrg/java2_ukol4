@@ -1,13 +1,19 @@
 package cz.czechitas.java2webapps.ukol3.entity;
+import jakarta.validation.constraints.NotBlank;
+
 import java.util.Objects;
 
 /**
  * Entita obsahující údaje zobrazené na vizitce.
  */
 public class Vizitka {
+    @NotBlank
     private String jmeno;
+    @NotBlank
     private String firma;
+    @NotBlank
     private String ulice;
+    @NotBlank
     private String obecPsc;
     private String email;
     private String telefon;

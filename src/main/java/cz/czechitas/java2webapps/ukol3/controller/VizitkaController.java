@@ -2,6 +2,7 @@ package cz.czechitas.java2webapps.ukol3.controller;
 
 import cz.czechitas.java2webapps.ukol3.entity.Vizitka;
 import cz.czechitas.java2webapps.ukol3.service.VizitkaService;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -39,7 +40,7 @@ public class VizitkaController {
         return modelAndView;
     }
     @PostMapping("")
-    public Object form(@ModelAttribute("form") Vizitka vizitka, BindingResult bindingResult) {
+    public Object form(@Valid @ModelAttribute("vizitka") Vizitka vizitka, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
             return "/nova";

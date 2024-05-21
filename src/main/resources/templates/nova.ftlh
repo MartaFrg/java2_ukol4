@@ -3,9 +3,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <title>Nová vizitka</title>
-    <link rel="stylesheet" href="/style.css"/>
+    [#include "_common/head.ftlh"]
 </head>
 <body>
 <div class="container">
@@ -30,6 +28,14 @@
 
         <label for="email" class="radek">E-mail:</label>
         [@spring.formInput path="vizitka.email" fieldType="email" /]
+        <div class="error">[@spring.showErrors "<br>"/]</div>
+
+        <label for="telefon" class="radek">Telefon:</label>
+        [@spring.formInput path="vizitka.telefon" /]
+        <div class="error">[@spring.showErrors "<br>"/]</div>
+
+        <label for="web" class="radek">Web:</label>
+        [@spring.formInput path="vizitka.web" /]
         <div class="error">[@spring.showErrors "<br>"/]</div>
 
         <div class="radek controls">
