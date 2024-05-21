@@ -38,7 +38,7 @@
         [@spring.formInput path="vizitka.web" /]
         <div class="error">[@spring.showErrors "<br>"/]</div>
 
-        <div class="radek">
+        <div class="radek controls">
             <button type="submit">Přidat</button>
         </div>
         <div class="radek">
