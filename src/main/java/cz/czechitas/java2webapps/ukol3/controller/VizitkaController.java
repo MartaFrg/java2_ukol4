@@ -40,7 +40,7 @@ public class VizitkaController {
         return modelAndView;
     }
     @PostMapping("")
-    public Object form(@Valid @ModelAttribute("vizitka") Vizitka vizitka, BindingResult bindingResult) {
+    public Object form(@Valid @ModelAttribute("visit") Vizitka vizitka, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
             return "/nova";
@@ -48,8 +48,7 @@ public class VizitkaController {
         service.PridejVizitku(vizitka);
            ModelAndView result = new ModelAndView("seznam");
         result.addObject("seznam", service.getAll());
-        return result;
-        //.addObject("kod", Math.abs(random.nextInt()))
+        return "redirect:/";
     }
     @PostMapping("/delete")
     public String delete(int id) {
