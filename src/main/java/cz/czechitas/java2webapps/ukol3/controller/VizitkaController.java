@@ -40,14 +40,12 @@ public class VizitkaController {
         return modelAndView;
     }
     @PostMapping("")
-    public Object form(@Valid @ModelAttribute("visit") Vizitka vizitka, BindingResult bindingResult) {
+    public Object form(@Valid @ModelAttribute("vizitka") Vizitka vizitka, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
             return "/nova";
         }
         service.PridejVizitku(vizitka);
-           ModelAndView result = new ModelAndView("seznam");
-        result.addObject("seznam", service.getAll());
         return "redirect:/";
     }
     @PostMapping("/delete")
